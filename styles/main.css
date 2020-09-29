@@ -1,0 +1,571 @@
+/*-------------------١--------------------------*/
+/*                  ملحوظات                     */
+/*
+ملحوظة عامة:لقد  تركت لكم تعليقات لتساعدك علي تنظيم الملف بالشكل المثالي
+تأكد من أن آخر جزء هو الجزء الحاوي لكل ما هو متعلق بشكل الصفحة على الهواتف والتابلت
+إذا كان لديك أي سؤال من فضلك إرسل لي الكود وشرح المشكلة علي البريد الالكتروني
+tony@barmej.com
+*/
+/*----------------------------------------------*/
+
+/* -----1- Fonts & Font-faces----- */
+/*
+Fonts & Font-faces سنقوم بوضع جميع الخطوط التي سنحتاجها هنا
+ملحوظة: إسم الخط هو إما
+Avenir Next 
+أو إن لم تجده فيمكنك استعمال خط 
+Lato
+*/
+@font-face {
+  font-family: "AvenirNext-Bold";
+  src: url("../fonts/AvenirNext-Bold.woff2") format("woff2"),
+    url("../fonts/AvenirNext-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNext-DemiBold";
+  src: url("../fonts/AvenirNext-DemiBold.woff2") format("woff2"),
+    url("../fonts/AvenirNext-DemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNext-Medium";
+  src: url("../fonts/AvenirNext-Medium.woff2") format("woff2"),
+    url("../fonts/AvenirNext-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNext-Regular";
+  src: url("../fonts/AvenirNext-Regular.woff2") format("woff2"),
+    url("../fonts/AvenirNext-Regular.woff") format("woff");
+}
+
+/*---------------------------------------------*/
+/* -----2- DEFAULTS ----- */
+/*
+يجب عليك هنا وضع أي من الأنماط العامة الخاصة بوسوم مثل
+html, body, h1, h2, p 
+وهي الأنماط التي تنطبق على الموقع بشكل عام وكل صفحاته وليس على عنصر معين في صفحة معينة
+*/
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+}
+h1 {
+  font-family: "AvenirNext-Bold";
+  font-size: 40px;
+  text-transform: capitalize;
+  color: rgb(34, 33, 33);
+  max-width: 309px;
+  line-height: 50px;
+}
+h2 {
+  font-family: "AvenirNext-DemiBold";
+  font-size: 40px;
+  text-transform: capitalize;
+  text-align: center;
+}
+h3 {
+  font-family: "AvenirNext-DemiBold";
+  font-size: 25px;
+  text-transform: capitalize;
+  padding: 24px 0 12px;
+}
+h4 {
+  font-family: "AvenirNext-DemiBold";
+  font-size: 22px;
+  text-transform: capitalize;
+  padding: 12px 0;
+}
+h5 {
+  font-family: "AvenirNext-DemiBold";
+  font-size: 16px;
+  text-transform: capitalize;
+}
+p {
+  font-size: 19px;
+  color: black;
+}
+.not-found-page {
+  color: #fd0303;
+  text-align: center;
+  align-items: center;
+  max-width: initial;
+  margin: 90px;
+}
+img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+
+/*----------------------٣-----------------------*/
+/*               HELPER CLASSES                 */
+/*
+يجب عليك هنا وضع أي من الأنماط الخاصة بال
+classes
+التي ستقوم بإعادة إستخدامها في أكثر من مكان خلال عملك على الموقع 
+على سبيل المثال: النمط الخاص بالزر الأزرق الذي يستعمله المصمم في كل الصفحات تقريباً
+*/
+/*----------------------------------------------*/
+
+.button {
+  border: 1px solid #3d3dbf;
+  padding: 13px 45px;
+  border-radius: 30px;
+  font-family: "AvenirNext-DemiBold";
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.button.is-primary {
+  color: white;
+  background: #3d3dbf;
+}
+.widgets {
+  display: flex;
+  justify-content: center;
+}
+
+/*----------------------٤-----------------------*/
+/*                    LAYOUT                    */
+/*                البناء العام للصفحة         */
+/*---------------------------------------------*/
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.page {
+  overflow: hidden;
+}
+
+/*----------------------5-----------------------*/
+/*                 HEADER                       */
+/*----------------------------------------------*/
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0 14px;
+  border-bottom: 2px solid whitesmoke;
+}
+.burger {
+  display: none;
+}
+.main-nav ul {
+  display: flex;
+}
+.main-nav li a {
+  margin: 0 16px;
+  padding-bottom: 5px;
+  font-family: "AvenirNext-DemiBold";
+  color: black;
+  font-size: 19px;
+  border-bottom: 3px solid transparent;
+}
+a.navbar-item.active {
+  border-bottom-color: olivedrab;
+}
+/*----------------------6-----------------------*/
+/*                 HERO                         */
+/*----------------------------------------------*/
+.hero {
+  margin-top: 40px;
+}
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+}
+.hero__desc p {
+  font-family: "AvenirNext-Medium";
+  line-height: 30px;
+  max-width: 381px;
+  margin: 20px 0 37px;
+}
+/*----------------------7-----------------------*/
+/*                 MEET YOUR MATCH              */
+/*----------------------------------------------*/
+.meetYourMatch {
+  position: relative;
+  text-align: center;
+  padding: 80px 0 89px;
+}
+.meetYourMatch .container {
+  position: relative;
+}
+.meetYourMatchــcontent {
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
+}
+.meetYourMatch__background {
+  position: absolute;
+  z-index: 1;
+  background: #eef0fc;
+  height: 512px;
+  width: 100%;
+  border-radius: 18px;
+}
+.meetYourMatchــform {
+  margin: 28px auto;
+  max-width: 500px;
+}
+.meetYourMatchــform .form-group {
+  position: relative;
+}
+.meetYourMatchــform .switcher #cat,
+#dog {
+  display: none;
+}
+.meetYourMatchــform .switcher {
+  margin: 40px auto;
+  text-align: center;
+}
+.meetYourMatchــform .switcher label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.meetYourMatchــform .switcher span {
+  color: #b1afaf;
+  font-size: 16px;
+  font-family: "AvenirNext-Medium";
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+.meetYourMatch .form-group {
+  display: inline-block;
+}
+.meetYourMatchــform .form-group input {
+  border: 1px solid #2e2ec4;
+  border-radius: 30px;
+  padding: 20px 255px 25px 45px;
+  margin-bottom: 30px;
+  background-image: url("../images/map-pin.png");
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+.meetYourMatchــform .form-group input::placeholder {
+  color: cornflowerblue;
+  font-size: 18px;
+  font-family: "AvenirNext-Regular";
+  text-transform: capitalize;
+}
+.meetYourMatchــform .form-group .is-primary {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px 63px;
+}
+
+.widgets.is-searchResults {
+  justify-content: space-around;
+  margin: 0 18px;
+}
+.is-searchResults img {
+  width: 100%;
+}
+.is-searchResults .widget {
+  box-shadow: 0px 76px 172px #e9f0f4;
+  margin: 12px 0;
+}
+.is-searchResults .widget__desc {
+  padding: 16px 14px;
+  text-align: left;
+}
+.is-searchResults .widget__desc p {
+  font-family: "AvenirNext-Regular";
+  margin-top: 5px;
+}
+.animalsGroups {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.animalsGroups .animalImg {
+  width: 70%;
+  height: 30%;
+}
+.animalsGroups .widget__desc h4 {
+  color: #3d3dbf;
+}
+.animalsGroups .widget__desc p {
+  font-size: 20px;
+  line-height: 30px;
+  font-size: 23px;
+}
+/* .animalsGroups .widget__note p{
+  color: crimson;
+} */
+/*----------------------8-----------------------*/
+/*                 HOW IT WORKS                 */
+/*----------------------------------------------*/
+.howItWorks {
+  text-align: center;
+  padding-top: 60px;
+}
+.howItWorks h2 {
+  padding-bottom: 16px;
+}
+.widgets.is-howItWorks {
+  justify-content: space-around;
+  margin: 30px;
+}
+.is-howItWorks .widget {
+  margin-bottom: 60px;
+}
+.is-howItWorks .widget__desc p {
+  line-height: 28px;
+  max-width: 337px;
+  margin: 0 auto;
+  color: rgb(138, 148, 156);
+}
+/*----------------------٩-----------------------*/
+/*                 STORIES                      */
+/*----------------------------------------------*/
+.stories {
+  background-color: rgb(242, 247, 248);
+  padding: 50px 0;
+}
+.stories h3 {
+  font-family: "AvenirNext-Regular";
+}
+.heading-paragraph {
+  margin: 50px auto;
+  max-width: 694px;
+  color: rgb(138, 148, 156);
+  font-family: "AvenirNext-Medium";
+  font-size: 20px;
+  text-align: center;
+  line-height: 28px;
+}
+.stories .widgetsStory {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.stories .widget__desc .storyParagh {
+  font-family: "AvenirNext-Regular";
+  font-size: 25px;
+  line-height: 30px;
+  margin: 16px 0;
+  background-color: rgb(201, 228, 201);
+  padding: 20px;
+  display: none;
+  width: 500px;
+}
+.widget__desc .link {
+  color: #2e2ec4;
+  font-family: "AvenirNext-DemiBold";
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*----------------------10----------------------*/
+/*       Actions: Change A Life, Adopt A Pet    */
+/*----------------------------------------------*/
+.actions {
+  background-color: #2e2ec4;
+  padding: 150px 0;
+  text-align: center;
+}
+.actions h2 {
+  color: cornsilk;
+  margin-bottom: 50px;
+}
+.button.is-secondary {
+  background: cornsilk;
+  color: #2e2ec4;
+}
+.button.is-outline {
+  color: white;
+  background-color: transparent;
+  border-color: whitesmoke;
+}
+/*---------------------11-----------------------*/
+/*                    FOOTER                    */
+/*----------------------------------------------*/
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 130px 0;
+}
+.copyrights {
+  flex-grow: 1;
+  font-family: "AvenirNext-Medium";
+  line-height: 25px;
+  color: black;
+}
+.copyrights p {
+  font-size: 13px;
+}
+.copyrights a {
+  color: black;
+}
+.footer-nav {
+  display: flex;
+  flex-grow: 1;
+}
+.footer-nav .item {
+  line-height: 40px;
+  flex-grow: 1;
+}
+.item a {
+  font-family: "AvenirNext-Regular";
+  font-size: 14px;
+  text-transform: capitalize;
+  color: black;
+}
+/*----------------------١٢----------------------*/
+/*                    Responsive                */
+/*       كل ما هو متعلق بالهواتف والتابلت       */
+/*----------------------------------------------*/
+
+/*ابعاد التابلت*/
+
+@media screen and (max-width: 1024px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero__desc p {
+    font-size: 18px;
+    width: 357px;
+  }
+  .button {
+    padding: 19px 62px;
+  }
+  .widgets {
+    flex-wrap: wrap;
+  }
+  .widget {
+    flex: 0 0 45%;
+  }
+  .widgets.is-howItWorks {
+    flex-direction: column;
+  }
+  .heading-paragraph {
+    max-width: 700px;
+    font-size: 19px;
+  }
+  .actions {
+    padding: 80px 0;
+  }
+  footer {
+    padding-bottom: 120px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-nav {
+    display: none;
+  }
+  /*اظهار القائمة الفرعية */
+  header.is-active .main-nav {
+    display: block;
+    position: absolute;
+    top: 83px;
+    background-color: #e1edf1;
+    width: 100%;
+    z-index: 1;
+  }
+  header.is-active .main-nav ul {
+    flex-direction: column;
+    margin: 12px 20px;
+  }
+  header.is-active .main-nav li {
+    padding-bottom: 15px;
+  }
+  header.is-active .main-nav li a {
+    flex-direction: column;
+    font-size: 12px;
+    padding-bottom: 1px;
+  }
+  /*burger علامة ال*/
+  .burger {
+    display: block;
+    border-color: TRANSPARENT;
+    background: TRANSPARENT;
+  }
+  .burger div {
+    margin: 6px 0;
+    background: transparent;
+    background: #2b292d;
+    height: 3px;
+    width: 20px;
+    cursor: pointer;
+  }
+
+  /* X علامة الـ */
+  header.is-active .burger div:first-child {
+    transform: rotate(45deg) translate(5px, 1px);
+  }
+  header.is-active .burger div:nth-child(even) {
+    display: none;
+  }
+  header.is-active .burger div:last-child {
+    transform: rotate(-45deg) translate(5px, -1px);
+  }
+
+  .hero .container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero p {
+    font-size: 14px;
+    width: 283px;
+  }
+  .hero__desc {
+    padding: 0 23px 0 28px;
+  }
+  .widgets {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .meetYourMatch {
+    padding: 0;
+  }
+  .meetYourMatch .container {
+    max-width: 100%;
+  }
+  .meetYourMatchــform .form-group .is-primary {
+    padding: 19px 33px;
+  }
+  .meetYourMatchــform .form-group input {
+    padding: 20px 80px 23px 45px;
+    background-position: 14px center;
+  }
+  .meetYourMatch__background {
+    border-radius: 0 0 18px 18px;
+    height: 454px;
+  }
+  .is-howItWorks .widget__desc p {
+    font-size: 18px;
+  }
+  .stories .widgets {
+    align-items: center;
+  }
+  .heading-paragraph {
+    font-size: 17px;
+  }
+  .actions h2 {
+    font-size: 25px;
+  }
+  .button {
+    padding: 14px 38px;
+  }
+  footer .container {
+    flex-direction: column;
+  }
+  .footer-nav {
+    flex-flow: row wrap;
+  }
+  .footer-nav .item {
+    padding: 0 23px 0 0;
+  }
+}

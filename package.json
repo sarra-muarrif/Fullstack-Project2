@@ -1,0 +1,12 @@
+{
+  "name": "Fullsatck-Project-1-master",
+  "version": "1.0.0",
+  "description": "## <div dir=\"rtl\"> عن المشروع</div>",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
